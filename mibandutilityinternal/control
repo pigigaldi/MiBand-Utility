@@ -1,0 +1,9 @@
+Package: com.pigigaldi.mibandutilityinternal
+Name: MiBandUtilityInternal
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome Cydia Substrate tweak!
+Maintainer: Pigi Galdi
+Author: Pigi Galdi
+Section: Tweaks

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Choose which applications can send notification to MiBand and choose LED color for each app.
+
+N.B: (**) Custom color function is in beta stage.
+Sometimes the band could have delays in vibrate and/or showing the LED for notification.
+			</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Enable Notification for Applications</string>
+			<key>icon</key>
+			<string>notify.png</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>isController</key>
+			<true/>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.pigigaldi.mibandutilitypreferences.plist</string>
+			<key>ALSettingsKeyPrefix</key>
+			<string>DKEnableColor-</string>
+			<key>ALChangeNotification</key>
+			<string>com.pigigaldi.mibandutilitypreferences.prefchanged</string>
+			<key>ALSettingsDefaultValue</key>
+			<integer>0</integer>
+			<key>ALAllowsSelection</key>
+			<true/>
+			<key>ALSectionDescriptors</key>
+			<array>
+				<!-- SYSTEM APPLICATION -->
+				<dict>
+					<key>title</key>
+					<string>System Application</string>
+					<key>footer-title</key>
+					<string></string>
+					<key>action</key>
+					<string>showPreferences</string>
+					<key>cell-class-name</key>
+					<string>ALDisclosureIndicatedCell</string>
+					<key>display-identifier-macro</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+					<key>entry</key>
+					<dict>
+						<key>PostNotification</key>
+						<string>com.pigigaldi.mibandutilitypreferences.prefchanged</string>
+						<key>bundle</key>
+						<string>AppList</string>
+						<key>cell</key>
+						<string>PSLinkListCell</string>
+						<key>default</key>
+						<integer>0</integer>
+						<key>defaults</key>
+						<string>com.pigigaldi.mibandutilitypreferences</string>
+						<key>detail</key>
+						<string>PSListItemsController</string>
+						<key>isController</key>
+						<true/>
+						<key>key</key>
+						<string>DKEnableColor-@@DISPLAYIDENTIFIER@@</string>
+						<key>overridePrincipalClass</key>
+						<true/>
+						<key>validTitles</key>
+						<array>
+							<string>    No Notification</string>
+							<string>** Red</string>
+							<string>    Green</string>
+							<string>** Blue</string>
+							<string>** Orange</string>
+							<string>** Purple</string>
+							<string>** Aqua</string>
+							<string>** Fuchsia</string>
+							<string>** Yellow</string>
+							<string>** Brown</string>
+							<string>** Gray</string>
+							<string>** White</string>
+						</array>
+						<key>validValues</key>
+						<array>
+							<integer>0</integer>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>3</integer>
+							<integer>4</integer>
+							<integer>5</integer>
+							<integer>6</integer>
+							<integer>7</integer>
+							<integer>8</integer>
+							<integer>9</integer>
+							<integer>10</integer>
+							<integer>11</integer>
+						</array>
+					</dict>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>(isSystemApplication = TRUE) AND NOT (displayIdentifier IN {'com.iptm.bigboss.sbsettings', 'com.booleanmagic.overboard'})</string>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>validTitles</key>
+					<array>
+						<string>    No Notification</string>
+						<string>** Red</string>
+						<string>    Green</string>
+						<string>** Blue</string>
+						<string>** Orange</string>
+						<string>** Purple</string>
+						<string>** Aqua</string>
+						<string>** Fuchsia</string>
+						<string>** Yellow</string>
+						<string>** Brown</string>
+						<string>** Gray</string>
+						<string>** White</string>
+					</array>
+					<key>validValues</key>
+					<array>
+						<string>0</string>
+						<string>1</string>
+						<string>2</string>
+						<string>3</string>
+						<string>4</string>
+						<string>5</string>
+						<string>6</string>
+						<string>7</string>
+						<string>8</string>
+						<string>9</string>
+						<string>10</string>
+						<string>11</string>
+					</array>
+				</dict>
+				<!-- END SYSTEM APPLICATION -->
+				<!-- USER APPLICATION -->
+				<dict>
+					<key>title</key>
+					<string>User Application</string>
+					<key>footer-title</key>
+					<string>
+MiBand Utility v0.0.3~beta1 © 2015 Pigi Galdi
+					</string>
+					<key>action</key>
+					<string>showPreferences</string>
+					<key>cell-class-name</key>
+					<string>ALDisclosureIndicatedCell</string>
+					<key>display-identifier-macro</key>
+					<string>@@DISPLAYIDENTIFIER@@</string>
+					<key>entry</key>
+					<dict>
+						<key>PostNotification</key>
+						<string>com.pigigaldi.mibandutilitypreferences.prefchanged</string>
+						<key>bundle</key>
+						<string>AppList</string>
+						<key>cell</key>
+						<string>PSLinkListCell</string>
+						<key>default</key>
+						<integer>0</integer>
+						<key>defaults</key>
+						<string>com.pigigaldi.mibandutilitypreferences</string>
+						<key>detail</key>
+						<string>PSListItemsController</string>
+						<key>isController</key>
+						<true/>
+						<key>key</key>
+						<string>DKEnableColor-@@DISPLAYIDENTIFIER@@</string>
+						<key>overridePrincipalClass</key>
+						<true/>
+						<key>validTitles</key>
+						<array>
+							<string>    No Notification</string>
+							<string>** Red</string>
+							<string>    Green</string>
+							<string>** Blue</string>
+							<string>** Orange</string>
+							<string>** Purple</string>
+							<string>** Aqua</string>
+							<string>** Fuchsia</string>
+							<string>** Yellow</string>
+							<string>** Brown</string>
+							<string>** Gray</string>
+							<string>** White</string>
+						</array>
+						<key>validValues</key>
+						<array>
+							<integer>0</integer>
+							<integer>1</integer>
+							<integer>2</integer>
+							<integer>3</integer>
+							<integer>4</integer>
+							<integer>5</integer>
+							<integer>6</integer>
+							<integer>7</integer>
+							<integer>8</integer>
+							<integer>9</integer>
+							<integer>10</integer>
+							<integer>11</integer>
+						</array>
+					</dict>
+					<key>icon-size</key>
+					<string>29</string>
+					<key>predicate</key>
+					<string>(isSystemApplication = FALSE)</string>
+					<key>suppress-hidden-apps</key>
+					<true/>
+					<key>validTitles</key>
+					<array>
+						<string>    No Notification</string>
+						<string>** Red</string>
+						<string>    Green</string>
+						<string>** Blue</string>
+						<string>** Orange</string>
+						<string>** Purple</string>
+						<string>** Aqua</string>
+						<string>** Fuchsia</string>
+						<string>** Yellow</string>
+						<string>** Brown</string>
+						<string>** Gray</string>
+						<string>** White</string>
+					</array>
+					<key>validValues</key>
+					<array>
+						<string>0</string>
+						<string>1</string>
+						<string>2</string>
+						<string>3</string>
+						<string>4</string>
+						<string>5</string>
+						<string>6</string>
+						<string>7</string>
+						<string>8</string>
+						<string>9</string>
+						<string>10</string>
+						<string>11</string>
+					</array>
+				</dict>
+				<!-- END USER APPLICATION -->
+			</array>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Default LED Color</string>
+			<key>footerText</key>
+			<string>This value should be the same as MiFit app.
+
+			</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Theme Color</string>
+			<key>icon</key>
+			<string>color.png</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>staticTextMessage</key>
+			<string>N.B: Theese colors are darken than the colors in MiFit.app (but it is not necessary).</string>
+			<key>validValues</key>
+			<array>
+				<string>red</string>
+				<string>green</string>
+				<string>blue</string>
+				<string>orange</string>
+				<string>purple</string>
+				<string>aqua</string>
+				<string>fuxia</string>
+				<string>yellow</string>
+				<string>brown</string>
+				<string>gray</string>
+				<string>white</string>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>Red</string>
+				<string>Green</string>
+				<string>Blue</string>
+				<string>Orange</string>
+				<string>Purple</string>
+				<string>Aqua</string>
+				<string>Fuchsia</string>
+				<string>Yellow</string>
+				<string>Brown</string>
+				<string>Gray</string>
+				<string>White</string>
+			</array>
+			<key>defaults</key>
+			<string>com.pigigaldi.mibandutilitypreferences</string>
+			<key>key</key>
+			<string>mibanduDefaultThemeColor</string>
+			<key>alignment</key>
+			<string>1</string>
+			<key>PostNotification</key>
+			<string>com.pigigaldi.mibandutilitypreferences.themecolorchanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Do Not Disturb</string>
+			<key>footerText</key>
+			<string>If enabled, your MiBand will not vibrate while DND is enabled.
+
+			</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>key</key>
+			<string>mibanduDoNotDisturb</string>
+			<key>label</key>
+			<string>Do Not Disturb</string>
+			<key>icon</key>
+			<string>moon.png</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.pigigaldi.mibandutilitypreferences</string>
+			<key>PostNotification</key>
+			<string>com.pigigaldi.mibandutilitypreferences.prefchanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Troubleshooting:</string>
+			<key>footerText</key>
+			<string>If "MiBand Utility" doesn't work for you, don't desperate! Try following theese steps and see if the problem will be solved.
+
+1) Open Xiaomi "MiFit" app and wait for the app to connect and syncing with the band.
+
+2) Done! Now you should have your band vibrate and light up on notifications!
+
+
+THE BATTERY OF YOUR PHONE AND YOUR MIBAND MAY DRAIN FASTER WHILE USING THIS TWEAK.
+			</string>
+			<key>footerAlignment</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<!--<key>footerText</key>
+			<string>Reboot: This will reboot your MiBand (You don't say?).
+Factory Reset: This will erease all data on your MiBand.
+			</string>-->
+			<key>footerText</key>
+			<string>This tweak is safe but, in case you want to know, I'm not responsible for any damages caused by using this tweak.
+
+Usually, a "Factory Reset", could solve most of the problems.
+
+MiBand Utility v0.0.3~beta1 © 2015, Pigi Galdi
+			</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>rebootMiBand:</string>
+			<key>label</key>
+			<string>Reboot MiBand</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>factoryResetMiBand:</string>
+			<key>label</key>
+			<string>Factory Reset MiBand</string>
+			<key>cellClass</key>
+			<string>PSDeleteButtonCell</string>
+		</dict>
+		<!--<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>MiBand Utility v0.0.1-80 © 2015, Pigi Galdi</string>
+			<key>footerAlignment</key>
+			<integer>1</integer>
+		</dict>-->
+	</array>
+	<key>title</key>
+	<string>MiBand</string>
+</dict>
+</plist>

@@ -1,0 +1,9 @@
+Package: com.pigigaldi.mibandutilitybeta
+Name: MiBand Utility
+Depends: mobilesubstrate, applist
+Version: 0.0.3~beta1
+Architecture: iphoneos-arm
+Description: Notification support for MiBand associated with iOS.
+Maintainer: Pigi Galdi
+Author: Pigi Galdi
+Section: Tweaks
